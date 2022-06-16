@@ -1,29 +1,34 @@
 #n
 <C-u> 9k
 <C-d> 9j
-sv :vsp<CR>
-sh :sp<CR>
-sc <C-w>c
-so <C-w>o
-s> :vertical resize +20<CR>
-s< :vertical resize -20<CR>
-s= <C-w>=
-sj :resize +10<CR>
-sk :resize -10<CR>
+<leader>v :vsp<CR>
+<leader>h :sp<CR>
+<leader>c <C-w>c
+<leader>o <C-w>o
+<leader>> :vertical resize +20<CR>
+<leader>< :vertical resize -20<CR>
+<leader>= <C-w>=
+<leader>j :resize +10<CR>
+<leader>k :resize -10<CR>
 <C-h> <C-w>h
 <C-j> <C-w>j
 <C-k> <C-w>k
 <C-l> <C-w>l
-<C-n> :NvimTreeToggle<CR>
-ff :Telescope find_files<CR>
-fg :Telescope live_grep<CR>
-fb :Telescope buffers<CR>
-<Tab>h :BufferPrevious<CR>
-<Tab>l :BufferNext<CR>
+<C-t> :ToggleTerm direction=float<CR>
+<leader>e :NvimTreeToggle<CR>
+<leader>f :Telescope find_files<CR>
+<leader>g :Telescope live_grep<CR>
+<leader>b :Telescope buffers<CR>
+H :BufferPrevious<CR>
+L :BufferNext<CR>
 
 #v
 < <gv
 > >gv
+jk <Esc>
 
 #i
 jk <Esc>
+
+#t
+<C-t> <C-\><C-n><C-w>c

@@ -1,16 +1,8 @@
 require('keymap')
 require('plugins')
+require('lsp.setup')
 
-
-local vimConfig = {
-  'number',
-  'relativenumber',
-  'expandtab',
-  'smartindent',
-  { 'clipboard', 'unnamedplus' },
-  { 'tabstop', 2 },
-  { 'shiftwidth', 2 },
-}
+local vimConfig = require 'core.vim-config'
 local function initVimConfig()
   for _, value in ipairs(vimConfig) do
     local k, v = value, true
