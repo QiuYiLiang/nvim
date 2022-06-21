@@ -43,16 +43,13 @@ require 'packer'.startup(function()
     requires = { 'nvim-lua/plenary.nvim' }
   }
   use {
-    'akinsho/bufferline.nvim',
-    tag = "v2.*",
-    requires = 'kyazdani42/nvim-web-devicons',
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'},
     config = function()
       require'bufferline'.setup{
-        options = {
-          close_icon = '',
-          buffer_close_icon = '',
-          show_buffer_close_icons = false
-        }
+        closable = false,
+        animation = false,
+        icon_close_tab = '',
       }
     end
   }
@@ -74,4 +71,21 @@ require 'packer'.startup(function()
       direction = 'float'
     }
   end }
+  use {
+    'yamatsum/nvim-cursorline',
+    config = function()
+      require'nvim-cursorline'.setup {
+        cursorline = {
+          enable = true,
+          timeout = 1000,
+          number = false,
+        },
+        cursorword = {
+          enable = true,
+          min_length = 3,
+          hl = { underline = true },
+        }
+      }
+    end
+  }
 end)

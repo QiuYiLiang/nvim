@@ -1,8 +1,8 @@
 #n
 <leader>v :vsp<CR>
+<leader>q :q<CR>
 <leader>h :sp<CR>
-<leader>c <C-w>c
-<leader>o <C-w>o
+<leader>c :BufferClose<CR>
 <leader>> :vertical resize +20<CR>
 <leader>< :vertical resize -20<CR>
 <leader>= <C-w>=
@@ -15,15 +15,16 @@
 <leader>a :lua vim.lsp.buf.code_action()<CR>
 <C-g> :DiffviewOpen<CR>
 <C-q> :DiffviewClose<CR>
-<C-u> 9k
-<C-d> 9j
 <C-h> <C-w>h
-<C-j> <C-w>j
-<C-k> <C-w>k
+<C-j> 9j
+<C-k> 9k
+<C>J <C-w>j
+<C>J <C-w>k
 <C-l> <C-w>l
 <C-t> :ToggleTerm direction=float<CR>
-H :BufferLineCyclePrev<CR>
-L :BufferLineCycleNext<CR>
+H :BufferPrevious<CR>
+L :BufferNext<CR>
+gd :lua vim.lsp.buf.definition()<CR> 
 
 #v
 > >gv
