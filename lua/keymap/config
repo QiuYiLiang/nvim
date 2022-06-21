@@ -1,6 +1,4 @@
 #n
-<C-u> 9k
-<C-d> 9j
 <leader>v :vsp<CR>
 <leader>h :sp<CR>
 <leader>c <C-w>c
@@ -10,21 +8,26 @@
 <leader>= <C-w>=
 <leader>j :resize +10<CR>
 <leader>k :resize -10<CR>
+<leader>e :NvimTreeToggle<CR>
+<leader>f :Telescope find_files<CR>
+<leader>t :Telescope live_grep<CR>
+<leader>b :Telescope buffers<CR>
+<leader>a :lua vim.lsp.buf.code_action()<CR>
+<C-g> :DiffviewOpen<CR>
+<C-q> :DiffviewClose<CR>
+<C-u> 9k
+<C-d> 9j
 <C-h> <C-w>h
 <C-j> <C-w>j
 <C-k> <C-w>k
 <C-l> <C-w>l
 <C-t> :ToggleTerm direction=float<CR>
-<leader>e :NvimTreeToggle<CR>
-<leader>f :Telescope find_files<CR>
-<leader>g :Telescope live_grep<CR>
-<leader>b :Telescope buffers<CR>
-H :BufferPrevious<CR>
-L :BufferNext<CR>
+H :BufferLineCyclePrev<CR>
+L :BufferLineCycleNext<CR>
 
 #v
-< <gv
 > >gv
+< <gv
 jk <Esc>
 
 #i

@@ -1,6 +1,5 @@
 require('keymap')
 require('plugins')
-require('lsp.setup')
 
 local vimConfig = require 'core.vim-config'
 local function initVimConfig()

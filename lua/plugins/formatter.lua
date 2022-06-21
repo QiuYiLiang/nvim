@@ -5,7 +5,7 @@ local prettier = util.copyf(defaults.prettier)
 local prettiereslint = util.copyf(defaults.prettiereslint)
 vim.cmd [[autocmd BufWritePost * FormatWrite]]
 
-require('formatter').setup {
+require'formatter'.setup{
   filetype = {
     html = { prettier },
     css = { prettier },

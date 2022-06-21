@@ -1,83 +1,41 @@
-local lspkind = require('lspkind')
-local cmp = require 'cmp'
+local luasnip = require 'luasnip'
 
+local cmp = require 'cmp'
 cmp.setup {
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      luasnip.lsp_expand(args.body)
     end,
   },
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' },
-  }, { { name = 'buffer' },
-    { name = 'path' }
-  }),
-
-  mapping = {
-    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-    ['<Tab>'] = cmp.mapping.select_next_item(),
-    ['<A-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-    ['<A-,>'] = cmp.mapping({
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close(),
-    }),
-    ['<CR>'] = cmp.mapping.confirm({
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
       select = true,
-      behavior = cmp.ConfirmBehavior.Replace
-    }),
-    ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-    ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' })
-  },
-  formatting = {
-    -- kind_icons = {
-    --   Class = " ",
-    --   Color = " ",
-    --   Constant = "ﲀ ",
-    --   Constructor = " ",
-    --   Enum = "練",
-    --   EnumMember = " ",
-    --   Event = " ",
-    --   Field = " ",
-    --   File = "",
-    --   Folder = " ",
-    --   Function = " ",
-    --   Interface = "ﰮ ",
-    --   Keyword = " ",
-    --   Method = " ",
-    --   Module = " ",
-    --   Operator = "",
-    --   Property = " ",
-    --   Reference = " ",
-    --   Snippet = " ",
-    --   Struct = " ",
-    --   Text = " ",
-    --   TypeParameter = " ",
-    --   Unit = "塞",
-    --   Value = " ",
-    --   Variable = " ",
-    -- },
-    format = lspkind.cmp_format({
-      with_text = true,
-      maxwidth = 50,
-      before = function(entry, vim_item)
-        vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"
-        return vim_item
+    },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
       end
-    })
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
   },
 }
-
-cmp.setup.cmdline('/', {
-  sources = {
-    { name = 'buffer' }
-  }
-})
-
-cmp.setup.cmdline(':', {
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
-  })
-})

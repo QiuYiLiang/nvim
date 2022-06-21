@@ -3,9 +3,9 @@ return {
   'relativenumber',
   'expandtab',
   'smartindent',
+  {'clipboard','unnamedplus,unnamed'},
   { 'signcolumn', 'yes' },
   { 'wrap', false },
-  { 'clipboard', 'unnamedplus' },
   { 'tabstop', 2 },
   { 'shiftwidth', 2 },
 }
