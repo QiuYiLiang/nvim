@@ -13,8 +13,6 @@
 <leader>t :Telescope live_grep<CR>
 <leader>b :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
-<C-g> :DiffviewOpen<CR>
-<C-q> :DiffviewClose<CR>
 <C-h> <C-w>h
 <C-j> 9j
 <C-k> 9k
