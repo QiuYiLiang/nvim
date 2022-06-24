@@ -2,7 +2,13 @@ local lsp_installer = require("nvim-lsp-installer")
 local lspconfig = require("lspconfig")
 
 local servers = {
-  'html'
+  'tsserver',
+  'html',
+  'cssls',
+  'cssmodules_ls',
+  'sumneko_lua',
+  'json_js',
+  'clangd',
 }
 
 lsp_installer.setup {}

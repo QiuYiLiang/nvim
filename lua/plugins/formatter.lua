@@ -2,7 +2,6 @@ local defaults = require "formatter.defaults"
 local util = require "formatter.util"
 
 local prettier = util.copyf(defaults.prettier)
-local prettiereslint = util.copyf(defaults.prettiereslint)
 vim.cmd [[autocmd BufWritePost * FormatWrite]]
 require 'formatter'.setup {
   filetype = {
@@ -11,8 +10,8 @@ require 'formatter'.setup {
     json = { prettier },
     yaml = { prettier },
     javascript = { prettier },
-    javascriptreact = { prettiereslint },
-    typescript = { prettiereslint },
-    typescriptreact = { prettiereslint },
+    javascriptreact = { prettier },
+    typescript = { prettier},
+    typescriptreact = { prettier},
   }
 }
