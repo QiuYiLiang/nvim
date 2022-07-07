@@ -1,5 +1,6 @@
 require('keymap')
 require('plugins')
+require('command')
 
 local vimConfig = require 'core.vim-config'
 local function initVimConfig()

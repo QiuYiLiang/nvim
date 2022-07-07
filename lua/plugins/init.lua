@@ -3,6 +3,7 @@ require 'plugins.nvim-tree'
 require 'plugins.nvim-cmp'
 require 'plugins.nvim-treesitter'
 require 'plugins.formatter'
+require 'plugins.dap'
 
 require 'packer'.startup(function()
   use 'wbthomason/packer.nvim'
@@ -15,6 +16,7 @@ require 'packer'.startup(function()
   use 'williamboman/nvim-lsp-installer'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
+  use 'mfussenegger/nvim-dap'
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {

@@ -1,6 +1,5 @@
 #n
 <leader>v :vsp<CR>
-<leader>q :q<CR>
 <leader>h :sp<CR>
 <leader>c :BufferClose<CR>
 <leader>> :vertical resize +20<CR>
@@ -13,12 +12,23 @@
 <leader>t :Telescope live_grep<CR>
 <leader>b :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
-<C-h> <C-w>h
+db :DapToggleBreakpoint<CR>
+dc :DapContinue<CR>
+do :DapStepOut<CR>
+di :DapStepInto<CR>
+du :DapStepOut<CR>
+df :DapShowFrames<CR>
+ds :DapShowScopes<CR>
+dh :DapHover<CR>
+dt :DapTerminate<CR>
+dr :DapToggleRepl<CR>
+<C-q> :q<CR>
 <C-j> 9j
 <C-k> 9k
-<C>J <C-w>j
-<C>J <C-w>k
+<C-h> <C-w>h
 <C-l> <C-w>l
+<C>J <C-w>j
+<C>K <C-w>k
 <C-t> :ToggleTerm direction=float<CR>
 H :BufferPrevious<CR>
 L :BufferNext<CR>
