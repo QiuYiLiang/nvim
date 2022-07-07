@@ -13,23 +13,22 @@
 <leader>b :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
 db :DapToggleBreakpoint<CR>
+dB :lua require 'dap'.set_breakpoint (vim.fn.input '[Condition] > ')<CR>
 dc :DapContinue<CR>
 do :DapStepOut<CR>
 di :DapStepInto<CR>
 du :DapStepOut<CR>
-df :DapShowFrames<CR>
-ds :DapShowScopes<CR>
+ds :DapUiToggle<CR>
 dh :DapHover<CR>
-dt :DapTerminate<CR>
-dr :DapToggleRepl<CR>
+J 9j
+K 9k
 <C-q> :q<CR>
-<C-j> 9j
-<C-k> 9k
 <C-h> <C-w>h
+<C-j> <C-w>j
+<C-k> <C-w>k
 <C-l> <C-w>l
-<C>J <C-w>j
-<C>K <C-w>k
 <C-t> :ToggleTerm direction=float<CR>
+<C-o> :AerialToggle<CR>
 H :BufferPrevious<CR>
 L :BufferNext<CR>
 gd :lua vim.lsp.buf.definition()<CR> 

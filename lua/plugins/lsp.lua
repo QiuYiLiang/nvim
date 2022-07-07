@@ -31,6 +31,10 @@ lspconfig.util.default_config = vim.tbl_extend(
     }
 )
 
+lspconfig.vimls.setup {
+  on_attach = require("aerial").on_attach,
+}
+
 for _, server in ipairs(lsp_installer.get_installed_servers()) do
   lspconfig[server.name].setup {}
 end

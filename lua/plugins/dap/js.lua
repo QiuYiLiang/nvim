@@ -1,11 +1,10 @@
-local dap = require('dap')
-
-local adaptersPath = os.getenv('HOME') .. '/.config/nvim/adapters' 
+local dap = require 'dap'
+local config = require 'plugins.dap.config'
 
 dap.adapters.node2 = {
   type = 'executable',
   command = 'node',
-  args = {adaptersPath .. '/vscode-node-debug2/out/src/nodeDebug.js'},
+  args = { config.installation_path .. 'jsnode/vscode-node-debug2/out/src/nodeDebug.js' }
 }
 
 dap.configurations.javascript = {
@@ -18,12 +17,5 @@ dap.configurations.javascript = {
     sourceMaps = true,
     protocol = 'inspector',
     console = 'integratedTerminal',
-  },
-  {
-    name = 'Attach to process',
-    type = 'node2',
-    request = 'attach',
-    processId = require'dap.utils'.pick_process,
-  },
+  }
 }
-

@@ -4,6 +4,7 @@ require 'plugins.nvim-cmp'
 require 'plugins.nvim-treesitter'
 require 'plugins.formatter'
 require 'plugins.dap'
+require 'plugins.aerial'
 
 require 'packer'.startup(function()
   use 'wbthomason/packer.nvim'
@@ -16,7 +17,12 @@ require 'packer'.startup(function()
   use 'williamboman/nvim-lsp-installer'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
+  use 'ravenxrz/DAPInstall.nvim'
   use 'mfussenegger/nvim-dap'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'rcarriga/nvim-dap-ui'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use 'stevearc/aerial.nvim'
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -87,13 +93,13 @@ require 'packer'.startup(function()
     end
   }
   use {
-  	"windwp/nvim-autopairs",
+  	'windwp/nvim-autopairs',
     config = function() 
-      require("nvim-autopairs").setup {}
+      require('nvim-autopairs').setup {}
     end
   }
   use {
-  	"windwp/nvim-ts-autotag",
+  	'windwp/nvim-ts-autotag',
     config = function() 
       require('nvim-ts-autotag').setup {}
     end

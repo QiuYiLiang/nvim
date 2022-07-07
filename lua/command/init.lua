@@ -4,20 +4,9 @@ end
 
 local cmd = vim.api.nvim_create_user_command
 
-cmd('DapShowScopes',
+cmd('DapUiToggle',
   function()
-    local widgets = require('dap.ui.widgets')
-    widgets.centered_float(widgets.scopes)
-  end,
-  {
-    nargs = 0
-  }
-)
-
-cmd('DapShowFrames',
-  function()
-    local widgets = require('dap.ui.widgets')
-    widgets.centered_float(widgets.frames)
+    require("dapui").toggle()
   end,
   {
     nargs = 0
@@ -26,7 +15,7 @@ cmd('DapShowFrames',
 
 cmd('DapHover',
   function()
-    require('dap.ui.widgets').hover()
+    require('dap.ui').hover()
   end,
   {
     nargs = 0
