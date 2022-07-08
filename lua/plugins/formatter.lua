@@ -11,7 +11,7 @@ require 'formatter'.setup {
     yaml = { prettier },
     javascript = { prettier },
     javascriptreact = { prettier },
-    typescript = { prettier},
-    typescriptreact = { prettier},
+    typescript = { prettier },
+    typescriptreact = { prettier },
   }
 }

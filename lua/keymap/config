@@ -1,34 +1,37 @@
 #n
-<leader>v :vsp<CR>
-<leader>h :sp<CR>
-<leader>c :BufferClose<CR>
-<leader>> :vertical resize +20<CR>
-<leader>< :vertical resize -20<CR>
-<leader>= <C-w>=
+<leader>u :vsp<CR>
+<leader>i :sp<CR>
+<leader>l :vertical resize +20<CR>
+<leader>h :vertical resize -20<CR>
 <leader>j :resize +10<CR>
 <leader>k :resize -10<CR>
+<leader>= <C-w>=
+<leader>c :BufferClose<CR>
 <leader>e :NvimTreeToggle<CR>
 <leader>f :Telescope find_files<CR>
-<leader>t :Telescope live_grep<CR>
+<leader>g :Telescope live_grep<CR>
 <leader>b :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
+<leader>o :AerialToggle<CR>
+<leader>/ :lua require('Comment.api').toggle_current_linewise()<CR>
+<leader>r :lua vim.lsp.buf.rename()<CR> 
+<leader>q :lua vim.diagnostic.setloclist()<CR>
+<leader>m :lua vim.lsp.buf.formatting()<CR>
+<C-t> :ToggleTerm direction=float<CR>
+<C-h> <C-w>h
+<C-j> <C-w>j
+<C-k> <C-w>k
+<C-l> <C-w>l
 db :DapToggleBreakpoint<CR>
 dB :lua require 'dap'.set_breakpoint (vim.fn.input '[Condition] > ')<CR>
 dc :DapContinue<CR>
-do :DapStepOut<CR>
+do :DapStepOver<CR>
 di :DapStepInto<CR>
 du :DapStepOut<CR>
 ds :DapUiToggle<CR>
 dh :DapHover<CR>
 J 9j
 K 9k
-<C-q> :q<CR>
-<C-h> <C-w>h
-<C-j> <C-w>j
-<C-k> <C-w>k
-<C-l> <C-w>l
-<C-t> :ToggleTerm direction=float<CR>
-<C-o> :AerialToggle<CR>
 H :BufferPrevious<CR>
 L :BufferNext<CR>
 gd :lua vim.lsp.buf.definition()<CR> 
@@ -37,9 +40,13 @@ gd :lua vim.lsp.buf.definition()<CR>
 > >gv
 < <gv
 jk <Esc>
+kj <Esc>
+<leader>/ :lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>
+
 
 #i
 jk <Esc>
+kj <Esc>
 
 #t
 <C-t> <C-\><C-n><C-w>c

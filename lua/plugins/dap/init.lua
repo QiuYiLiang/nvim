@@ -1,9 +1,27 @@
-require 'plugins.dap.ui'
+require 'plugins.dap.nvim-dap-ui'
+require 'plugins.dap.nvim-dap-virtual-text'
 require 'plugins.dap.js'
+local dbg_installed_list = require 'dap-install.api.debuggers'.get_installed_debuggers()
+local install = require 'dap-install.core.install'.install_debugger
 
-local dap_install = require 'dap-install'
+local dbg_installed_map = {}
 
-local config = require 'plugins.dap.config'
+for _, debugger in ipairs(dbg_installed_list) do
+  dbg_installed_map[debugger] = true
+end
 
-dap_install.setup(config)
+local dgb_list = {
+  'python',
+  'go',
+  'jsnode',
+  'ccppr_vsc',
+  'chrome'
+}
 
+for _, debugger in ipairs(dgb_list) do
+  if dbg_installed_map[debugger] ~= true then
+    install(debugger)
+  end
+end
+
+require 'dap-install'.setup(require 'plugins.dap.config')
