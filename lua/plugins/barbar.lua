@@ -1,5 +1,5 @@
 require 'bufferline'.setup {
-  closable = false,
-  animation = false,
-  icon_close_tab = '',
+	closable = false,
+	animation = false,
+	icon_close_tab = '',
 }

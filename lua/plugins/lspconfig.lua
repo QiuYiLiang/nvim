@@ -3,9 +3,7 @@ local lspconfig = require("lspconfig")
 
 local servers = {
   'tsserver',
-  'html',
   'cssls',
-  'cssmodules_ls',
   'sumneko_lua',
   'json_js',
   'clangd',

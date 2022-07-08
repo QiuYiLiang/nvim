@@ -1,7 +1,10 @@
 require 'plugins.dap.nvim-dap-ui'
 require 'plugins.dap.nvim-dap-virtual-text'
-require 'plugins.dap.js'
+require 'plugins.dap.jsnode'
+require 'plugins.dap.ccppr_vsc'
+
 local dbg_installed_list = require 'dap-install.api.debuggers'.get_installed_debuggers()
+
 local install = require 'dap-install.core.install'.install_debugger
 
 local dbg_installed_map = {}
