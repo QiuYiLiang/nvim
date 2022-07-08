@@ -1,3 +1,4 @@
+require 'plugins.packer'
 require 'plugins.toggleterm'
 require 'plugins.aerial'
 require 'plugins.dap'
