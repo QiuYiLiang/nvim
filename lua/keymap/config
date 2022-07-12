@@ -7,6 +7,7 @@
 <leader>k :resize -10<CR>
 <leader>= <C-w>=
 <leader>c :BufferClose<CR>
+<leader>C :BufferCloseAllButCurrent<CR>
 <leader>e :NvimTreeToggle<CR>
 <leader>f :Telescope find_files<CR>
 <leader>g :Telescope live_grep<CR>
@@ -18,6 +19,7 @@
 <leader>q :lua vim.diagnostic.setloclist()<CR>
 <leader>m :lua vim.lsp.buf.formatting()<CR>
 <C-t> :ToggleTerm direction=float<CR>
+<C-f> :NvimTreeFindFile<CR>
 <C-h> <C-w>h
 <C-j> <C-w>j
 <C-k> <C-w>k
