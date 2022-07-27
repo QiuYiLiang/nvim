@@ -5,8 +5,10 @@ local servers = {
   'tsserver',
   'cssls',
   'sumneko_lua',
-  'json_js',
+  'jsonls',
   'clangd',
+  'marksman',
+  'bashls'
 }
 
 lsp_installer.setup {}

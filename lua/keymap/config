@@ -27,11 +27,12 @@
 db :DapToggleBreakpoint<CR>
 dB :lua require 'dap'.set_breakpoint (vim.fn.input '[Condition] > ')<CR>
 dc :DapContinue<CR>
-do :DapStepOver<CR>
+dn :DapStepOver<CR>
 di :DapStepInto<CR>
-du :DapStepOut<CR>
-ds :DapUiToggle<CR>
+do :DapStepOut<CR>
+du :DapUiToggle<CR>
 dh :DapHover<CR>
+ds :lua require 'dap'.stop()<CR>
 J 9j
 K 9k
 H :BufferPrevious<CR>

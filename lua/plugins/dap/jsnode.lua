@@ -17,5 +17,12 @@ dap.configurations.javascript = {
     sourceMaps = true,
     protocol = 'inspector',
     console = 'integratedTerminal',
+  },
+  {
+    name = 'Attach to process',
+    type = 'node2',
+    request = 'attach',
+    -- processId = require'dap.utils'.pick_process,
+    prot = 9229
   }
 }
