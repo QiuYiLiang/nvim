@@ -8,7 +8,8 @@ local servers = {
   'jsonls',
   'clangd',
   'marksman',
-  'bashls'
+  'bashls',
+  'eslint'
 }
 
 lsp_installer.setup {}
