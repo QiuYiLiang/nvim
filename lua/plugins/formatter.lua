@@ -1,8 +1,9 @@
-local defaults = require "formatter.defaults"
+local filetypes = require "formatter.filetypes"
 local util = require "formatter.util"
 
-local prettiereslint = util.copyf(defaults.prettiereslint)
-local clangformat = util.copyf(defaults.clangformat)
+local prettiereslint = util.copyf(filetypes.javascriptreact.prettiereslint)
+local clangformat = util.copyf(filetypes.cpp.clangformat)
+local sh = util.copyf(filetypes.sh.shfmt)
 vim.cmd [[autocmd BufWritePost * FormatWrite]]
 require 'formatter'.setup {
   filetype = {
@@ -16,5 +17,6 @@ require 'formatter'.setup {
     typescriptreact = { prettiereslint },
     c = { clangformat },
     cpp = { clangformat },
+    sh = { sh }
   }
 }
