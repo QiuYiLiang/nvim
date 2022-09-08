@@ -14,7 +14,7 @@
 <leader>b :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
 <leader>o :AerialToggle<CR>
-<leader>/ :lua require('Comment.api').toggle_current_linewise()<CR>
+<leader>/ :lua require('Comment.api').toggle.linewise.current()<CR>
 <leader>r :lua vim.lsp.buf.rename()<CR> 
 <leader>q :lua vim.diagnostic.setloclist()<CR>
 <leader>m :lua vim.lsp.buf.formatting()<CR>
@@ -44,7 +44,7 @@ gd :lua vim.lsp.buf.definition()<CR>
 < <gv
 jk <Esc>
 kj <Esc>
-<leader>/ :lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>
+<leader>/ :lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>
 
 
 #i
