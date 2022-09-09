@@ -13,7 +13,7 @@
 <leader>g :Telescope live_grep<CR>
 <leader>b :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
-<leader>o :AerialToggle<CR>
+<leader>o :AerialToggle!<CR>
 <leader>/ :lua require('Comment.api').toggle.linewise.current()<CR>
 <leader>r :lua vim.lsp.buf.rename()<CR> 
 <leader>q :lua vim.diagnostic.setloclist()<CR>
