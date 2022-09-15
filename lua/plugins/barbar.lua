@@ -1,5 +1,5 @@
-require 'bufferline'.setup {
+require("bufferline").setup({
 	closable = false,
 	animation = false,
-	icon_close_tab = '',
-}
+	icon_close_tab = "",
+})
