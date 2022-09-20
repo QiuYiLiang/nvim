@@ -44,6 +44,8 @@ gd :lua vim.lsp.buf.definition()<CR>
 < <gv
 jk <Esc>
 kj <Esc>
+J 9j
+K 9k
 <leader>/ :lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>
 
 
