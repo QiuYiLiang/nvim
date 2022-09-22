@@ -13,9 +13,11 @@ for line in io.lines(dir_path .. "config") do
 	local lsh, rsh = line:match(matchRule)
 
 	if mode and lsh:len() > 0 and rsh:len() > 0 then
-		vim.api.nvim_set_keymap(mode, lsh, rsh, {
-			noremap = true,
-			silent = true,
-		})
+		for c in mode:gmatch(".") do
+			vim.api.nvim_set_keymap(c, lsh, rsh, {
+				noremap = true,
+				silent = true,
+			})
+		end
 	end
 end
