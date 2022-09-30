@@ -3,10 +3,9 @@ require("nvim-tree").setup({
 		side = "right",
 		mappings = {
 			list = {
-				{
-					key = "l",
-					action = "edit",
-				},
+				{ key = "l", action = "edit" },
+				{ key = "E", action = "last_sibling" },
+				{ key = "I", action = "first_sibling" },
 			},
 		},
 	},

@@ -70,7 +70,5 @@ ds :lua vim.lsp.buf.definition()<CR>
 < <gv
 <leader>/ :lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>
 
-#i
-
 #t
 <C-g> <C-\><C-n><C-w>c

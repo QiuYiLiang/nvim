@@ -5,6 +5,7 @@ local prettiereslint = util.copyf(filetypes.javascriptreact.prettiereslint)
 local clangformat = util.copyf(filetypes.cpp.clangformat)
 local shfmt = util.copyf(filetypes.sh.shfmt)
 local stylua = util.copyf(filetypes.lua.stylua)
+local yapf = util.copyf(filetypes.python.yapf)
 vim.cmd([[autocmd BufWritePost * FormatWrite]])
 require("formatter").setup({
 	filetype = {
@@ -23,5 +24,6 @@ require("formatter").setup({
 		cpp = { clangformat },
 		sh = { shfmt },
 		lua = { stylua },
+		python = { yapf },
 	},
 })

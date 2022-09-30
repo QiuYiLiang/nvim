@@ -7,6 +7,7 @@ local servers = {
 	"sumneko_lua",
 	"jsonls",
 	"clangd",
+	"pylsp",
 	"marksman",
 	"bashls",
 	"eslint",
