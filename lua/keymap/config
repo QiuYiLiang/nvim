@@ -61,8 +61,8 @@ do :DapStepOut<CR>
 du :DapUiToggle<CR>
 dh :DapHover<CR>
 ds :lua require 'dap'.stop()<CR>
-O :BufferPrevious<CR>
-N :BufferNext<CR>
+N :BufferPrevious<CR>
+O :BufferNext<CR>
 ds :lua vim.lsp.buf.definition()<CR> 
 
 #v
