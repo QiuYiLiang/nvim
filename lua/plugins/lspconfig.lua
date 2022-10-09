@@ -11,6 +11,8 @@ local servers = {
 	"marksman",
 	"bashls",
 	"eslint",
+	"gopls",
+	"rust-analyzer",
 }
 
 lsp_installer.setup({})
