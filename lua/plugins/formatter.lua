@@ -8,6 +8,7 @@ local stylua = util.copyf(filetypes.lua.stylua)
 local yapf = util.copyf(filetypes.python.yapf)
 local gofmt = util.copyf(filetypes.go.gofmt)
 local rustfmt = util.copyf(filetypes.rust.rustfmt)
+local taplo = util.copyf(filetypes.toml.taplo)
 vim.cmd([[autocmd BufWritePost * FormatWrite]])
 require("formatter").setup({
 	filetype = {
@@ -15,6 +16,7 @@ require("formatter").setup({
 		css = { prettiereslint },
 		json = { prettiereslint },
 		yaml = { prettiereslint },
+		toml = { taplo },
 		javascript = { prettiereslint },
 		javascriptreact = { prettiereslint },
 		typescript = { prettiereslint },

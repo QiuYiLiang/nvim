@@ -12,6 +12,7 @@ local servers = {
 	"bashls",
 	"eslint",
 	"gopls",
+	"taplo",
 	"rust-analyzer",
 }
 
