@@ -10,12 +10,13 @@ require("plugins.lspconfig")
 require("plugins.auto-seesion")
 require("plugins.barbar")
 require("plugins.nvim-cursorline")
-require("galaxyline.themes.eviline")
 require("nvim-treesitter.install").update({})
 require("nvim-ts-autotag").setup({})
 require("nvim-autopairs").setup({})
 require("Comment").setup({})
 vim.cmd([[set background=light]])
--- vim.cmd([[colorscheme dracula]])
--- vim.cmd([[colorscheme onedarkpro]])
 vim.cmd([[colorscheme rose-pine]])
+
+local colors = require("galaxyline.themes.colors")["doom-one"]
+colors.bg = "#fffaf3"
+require("galaxyline.themes.eviline")
