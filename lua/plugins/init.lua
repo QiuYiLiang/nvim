@@ -15,8 +15,7 @@ require("nvim-treesitter.install").update({})
 require("nvim-ts-autotag").setup({})
 require("nvim-autopairs").setup({})
 require("Comment").setup({})
+vim.cmd([[set background=light]])
 -- vim.cmd([[colorscheme dracula]])
-require("onedarkpro").setup({
-	dark_theme = "onelight",
-})
-vim.cmd([[colorscheme onedarkpro]])
+-- vim.cmd([[colorscheme onedarkpro]])
+vim.cmd([[colorscheme rose-pine]])
