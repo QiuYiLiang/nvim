@@ -18,13 +18,12 @@ dd gg
 D G
 p r
 f e
+t f
 E 9j
 I 9k
 
 #vi
 ei <Esc>
-ie <Esc>
-
 
 #n
 <leader>u :vsp<CR>
