@@ -15,6 +15,7 @@ require("nvim-ts-autotag").setup({})
 require("nvim-autopairs").setup({})
 require("Comment").setup({})
 vim.cmd([[set background=light]])
+vim.cmd([[set clipboard+=unnamedplus]])
 vim.cmd([[colorscheme rose-pine]])
 
 local colors = require("galaxyline.themes.colors")["doom-one"]
