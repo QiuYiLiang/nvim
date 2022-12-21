@@ -25,8 +25,6 @@ d v
 ei <Esc>
 
 #n
-<leader>u :vsp<CR>
-<leader>k :sp<CR>
 <leader>o :vertical resize +20<CR>
 <leader>n :vertical resize -20<CR>
 <leader>e :resize +10<CR>
@@ -40,12 +38,14 @@ ei <Esc>
 <leader>k :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
 <leader>/ :lua require('Comment.api').toggle.linewise.current()<CR>
-<leader>r :lua vim.lsp.buf.rename()<CR> 
 <leader>q :lua vim.diagnostic.setloclist()<CR>
 <leader>m :lua vim.lsp.buf.formatting()<CR>
 <leader>h :DiffviewToggle<CR>
+<C-r> :lua vim.lsp.buf.rename()<CR> 
 <C-b> :ToggleTerm direction=float<CR>
 <C-t> :NvimTreeFindFile<CR>
+<C-u> :vsp<CR>
+<C-k> :sp<CR>
 <C-n> <C-w>h
 <C-e> <C-w>j
 <C-i> <C-w>k
