@@ -43,12 +43,17 @@ ei <Esc>
 <leader>r :lua vim.lsp.buf.rename()<CR> 
 <leader>q :lua vim.diagnostic.setloclist()<CR>
 <leader>m :lua vim.lsp.buf.formatting()<CR>
+<leader>h :DiffviewToggle<CR>
 <C-b> :ToggleTerm direction=float<CR>
 <C-t> :NvimTreeFindFile<CR>
 <C-n> <C-w>h
 <C-e> <C-w>j
 <C-i> <C-w>k
 <C-o> <C-w>l
+<C-w>n <C-w>h
+<C-w>e <C-w>j
+<C-w>i <C-w>k
+<C-w>o <C-w>l
 <C-p> :AerialToggle!<CR>
 db :DapToggleBreakpoint<CR>
 dB :lua require 'dap'.set_breakpoint (vim.fn.input '[Condition] > ')<CR>
