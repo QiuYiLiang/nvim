@@ -16,6 +16,13 @@ local googlejavaformat = function()
 		stdin = true,
 	}
 end
+local xmllint = function()
+	return {
+		exe = "xmllint",
+		args = { "--format", util.escape_path(util.get_current_buffer_file_path()) },
+		stdin = true,
+	}
+end
 
 vim.cmd([[autocmd BufWritePost * FormatWrite]])
 require("formatter").setup({
@@ -41,6 +48,9 @@ require("formatter").setup({
 		rust = { rustfmt },
 		java = {
 			googlejavaformat,
+		},
+		xml = {
+			xmllint,
 		},
 	},
 })
