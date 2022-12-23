@@ -14,6 +14,7 @@ local servers = {
 	"gopls",
 	"taplo",
 	"rust-analyzer",
+	"jdtls",
 }
 
 lsp_installer.setup({})

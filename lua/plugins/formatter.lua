@@ -9,6 +9,14 @@ local yapf = util.copyf(filetypes.python.yapf)
 local gofmt = util.copyf(filetypes.go.gofmt)
 local rustfmt = util.copyf(filetypes.rust.rustfmt)
 local taplo = util.copyf(filetypes.toml.taplo)
+local googlejavaformat = function()
+	return {
+		exe = "google-java-format",
+		args = { util.escape_path(util.get_current_buffer_file_path()) },
+		stdin = true,
+	}
+end
+
 vim.cmd([[autocmd BufWritePost * FormatWrite]])
 require("formatter").setup({
 	filetype = {
@@ -31,5 +39,8 @@ require("formatter").setup({
 		python = { yapf },
 		go = { gofmt },
 		rust = { rustfmt },
+		java = {
+			googlejavaformat,
+		},
 	},
 })
