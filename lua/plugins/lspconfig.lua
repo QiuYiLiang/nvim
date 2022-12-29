@@ -16,6 +16,8 @@ local servers = {
 	"rust-analyzer",
 	"jdtls",
 	"lemminx",
+	"dockerls",
+	"yamlls",
 }
 
 lsp_installer.setup({})
