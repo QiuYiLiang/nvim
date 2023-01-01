@@ -15,9 +15,11 @@ require("nvim-treesitter.install").update({})
 require("nvim-ts-autotag").setup({})
 require("nvim-autopairs").setup({})
 require("Comment").setup({})
+
 vim.cmd([[set background=light]])
 vim.cmd([[set clipboard+=unnamedplus]])
 vim.cmd([[colorscheme rose-pine]])
+vim.cmd([[set laststatus=0]])
 
 local colors = require("galaxyline.themes.colors")["doom-one"]
 colors.bg = "#fffaf3"

@@ -17,7 +17,6 @@ local servers = {
 	"jdtls",
 	"lemminx",
 	"dockerls",
-	"yamlls",
 }
 
 lsp_installer.setup({})

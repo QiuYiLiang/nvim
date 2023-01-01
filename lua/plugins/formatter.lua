@@ -30,7 +30,6 @@ require("formatter").setup({
 		html = { prettiereslint },
 		css = { prettiereslint },
 		json = { prettiereslint },
-		yaml = { prettiereslint },
 		toml = { taplo },
 		javascript = { prettiereslint },
 		javascriptreact = { prettiereslint },

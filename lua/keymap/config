@@ -41,6 +41,7 @@ ei <Esc>
 <leader>q :lua vim.diagnostic.setloclist()<CR>
 <leader>m :lua vim.lsp.buf.formatting()<CR>
 <leader>h :DiffviewToggle<CR>
+<tab> :Telescope buffers<CR>
 <C-r> :lua vim.lsp.buf.rename()<CR> 
 <C-b> :ToggleTerm direction=float<CR>
 <C-t> :NvimTreeFindFile<CR>

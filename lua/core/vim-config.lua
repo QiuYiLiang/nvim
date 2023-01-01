@@ -1,8 +1,9 @@
 return {
-	"number",
-	"relativenumber",
+	-- "number",
+	-- "relativenumber",
 	"expandtab",
 	"smartindent",
+	"nobackup",
 	{ "clipboard", "unnamedplus,unnamed" },
 	{ "signcolumn", "yes" },
 	{ "wrap", false },

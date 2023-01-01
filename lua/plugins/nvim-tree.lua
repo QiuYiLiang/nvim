@@ -1,6 +1,15 @@
 require("nvim-tree").setup({
 	open_on_setup = true,
 	view = {
+		float = {
+			enable = true,
+			quit_on_focus_loss = true,
+			open_win_config = {
+				relative = "cursor",
+				border = "none",
+				style = "minimal",
+			},
+		},
 		side = "right",
 		mappings = {
 			custom_only = true,
