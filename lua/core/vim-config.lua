@@ -3,7 +3,7 @@ return {
 	-- "relativenumber",
 	"expandtab",
 	"smartindent",
-	"nobackup",
+	{ "cmdheight", 0 },
 	{ "clipboard", "unnamedplus,unnamed" },
 	{ "signcolumn", "yes" },
 	{ "wrap", false },

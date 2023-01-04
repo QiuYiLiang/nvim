@@ -15,3 +15,13 @@ cmd("DapHover", function()
 end, {
 	nargs = 0,
 })
+
+cmd("Power", function()
+	print(
+		io.popen(
+			"echo $[$[$(cat /sys/class/power_supply/BAT0/charge_now) * 100] / $(cat /sys/class/power_supply/BAT0/charge_full)]"
+		):read("*all")
+	)
+end, {
+	nargs = 0,
+})

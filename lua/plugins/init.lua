@@ -16,11 +16,19 @@ require("nvim-ts-autotag").setup({})
 require("nvim-autopairs").setup({})
 require("Comment").setup({})
 
-vim.cmd([[set background=light]])
+-- clipboard
+
 vim.cmd([[set clipboard+=unnamedplus]])
+
+-- theme
+vim.cmd([[set background=light]])
 vim.cmd([[colorscheme rose-pine]])
 vim.cmd([[set laststatus=0]])
-
 local colors = require("galaxyline.themes.colors")["doom-one"]
 colors.bg = "#fffaf3"
 require("galaxyline.themes.eviline")
+
+-- git-blame.nvim
+vim.g.gitblame_enabled = 0
+
+vim.opt.scrolloff = 5
