@@ -1,4 +1,10 @@
-require("plugins.packer")
+if not pcall(require, "plugins.packer") then
+  return false
+end
+
+if not pcall(require, "Comment") then
+  return false
+end
 require("plugins.toggleterm")
 require("plugins.aerial")
 require("plugins.dap")
