@@ -4,7 +4,6 @@ local lspconfig = require("lspconfig")
 local servers = {
 	"tsserver",
 	"cssls",
-	"sumneko_lua",
 	"jsonls",
 	"clangd",
 	"pylsp",
@@ -17,6 +16,8 @@ local servers = {
 	"jdtls",
 	"lemminx",
 	"dockerls",
+	"vuels",
+	"volar",
 }
 
 lsp_installer.setup({})

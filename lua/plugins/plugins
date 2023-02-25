@@ -23,7 +23,6 @@ stevearc/aerial.nvim
 numToStr/Comment.nvim
 kyazdani42/nvim-web-devicons
 kyazdani42/nvim-tree.lua
-NTBBloodbath/galaxyline.nvim
 nvim-lua/plenary.nvim
 romgrk/barbar.nvim
 rmagatti/auto-session
@@ -35,3 +34,4 @@ windwp/nvim-ts-autotag
 Mofiqul/dracula.nvim
 rose-pine/neovim
 sindrets/diffview.nvim
+olimorris/onedarkpro.nvim

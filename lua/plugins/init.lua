@@ -1,9 +1,9 @@
 if not pcall(require, "plugins.packer") then
-  return false
+	return false
 end
 
 if not pcall(require, "Comment") then
-  return false
+	return false
 end
 require("plugins.toggleterm")
 require("plugins.aerial")
@@ -23,16 +23,11 @@ require("nvim-autopairs").setup({})
 require("Comment").setup({})
 
 -- clipboard
-
 vim.cmd([[set clipboard+=unnamedplus]])
 
 -- theme
-vim.cmd([[set background=light]])
-vim.cmd([[colorscheme rose-pine]])
-vim.cmd([[set laststatus=0]])
-local colors = require("galaxyline.themes.colors")["doom-one"]
-colors.bg = "#fffaf3"
-require("galaxyline.themes.eviline")
+vim.cmd("colorscheme onelight")
+vim.cmd("set laststatus=0")
 
 -- git-blame.nvim
 vim.g.gitblame_enabled = 0
