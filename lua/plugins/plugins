@@ -31,7 +31,6 @@ akinsho/toggleterm.nvim
 yamatsum/nvim-cursorline
 windwp/nvim-autopairs
 windwp/nvim-ts-autotag
-Mofiqul/dracula.nvim
 rose-pine/neovim
 sindrets/diffview.nvim
 olimorris/onedarkpro.nvim
