@@ -26,6 +26,11 @@ require("Comment").setup({})
 vim.cmd([[set clipboard+=unnamedplus]])
 
 -- theme
+require("onedarkpro").setup({
+	colors = {
+		bg = "#ffffff",
+	},
+})
 vim.cmd("colorscheme onelight")
 vim.cmd("set laststatus=0")
 
