@@ -1,5 +1,5 @@
 return {
-	-- "number",
+	"number",
 	-- "relativenumber",
 	"expandtab",
 	"smartindent",

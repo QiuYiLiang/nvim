@@ -21,6 +21,7 @@ require("nvim-treesitter.install").update({})
 require("nvim-ts-autotag").setup({})
 require("nvim-autopairs").setup({})
 require("Comment").setup({})
+require("vgit").setup()
 
 -- clipboard
 vim.cmd([[set clipboard+=unnamedplus]])

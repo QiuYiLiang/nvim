@@ -18,6 +18,7 @@ local servers = {
 	"dockerls",
 	"vuels",
 	"volar",
+	"pylsp",
 }
 
 lsp_installer.setup({})
