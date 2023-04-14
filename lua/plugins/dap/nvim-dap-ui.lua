@@ -8,7 +8,7 @@ require("dapui").setup({
 		repl = "r",
 		toggle = "t",
 	},
-	expand_lines = vim.fn.has("nvim-0.7"),
+	expand_lines = vim.fn.has("nvim"),
 	layouts = {
 		{
 			elements = {

@@ -1,8 +1,4 @@
-require("bufferline").setup({
-	closable = false,
-	animation = false,
-	icon_close_tab = "",
-})
+require("bufferline").setup({})
 
 vim.api.nvim_create_autocmd("BufWinEnter", {
 	pattern = "*",
