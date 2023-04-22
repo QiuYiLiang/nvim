@@ -25,38 +25,32 @@ d v
 ei <Esc>
 
 #n
-<leader>o :vertical resize +20<CR>
-<leader>n :vertical resize -20<CR>
-<leader>e :resize +10<CR>
-<leader>i :resize -10<CR>
-<leader>= <C-w>=
+# <leader>o :vertical resize +20<CR>
+# <leader>n :vertical resize -20<CR>
+# <leader>e :resize +10<CR>
+# <leader>i :resize -10<CR>
+# <leader>= <C-w>=
 <leader>c :BufferClose<CR>
 <leader>C :BufferCloseAllButCurrent<CR>
 <leader>f :NvimTreeToggle<CR>
 <leader>t :Telescope find_files<CR>
 <leader>g :Telescope live_grep<CR>
-<leader>k :Telescope buffers<CR>
+# <leader>b :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
 <leader>/ :lua require('Comment.api').toggle.linewise.current()<CR>
 <leader>q :lua vim.diagnostic.setloclist()<CR>
-<leader>m :lua vim.lsp.buf.formatting()<CR>
+# <leader>m :lua vim.lsp.buf.formatting()<CR>
 <leader>h :DiffviewToggle<CR>
-<tab> :Telescope buffers<CR>
+<leader>r :lua vim.lsp.buf.rename()<CR> 
 <C-c> :GitBlameToggle<CR> 
-<C-r> :lua vim.lsp.buf.rename()<CR> 
-<C-b> :ToggleTerm direction=float<CR>
-<C-t> :NvimTreeFindFile<CR>
-<C-u> :vsp<CR>
-<C-k> :sp<CR>
+<C-b> :ToggleTerm direction=float<CR>a
+# <C-u> :vsp<CR>
+# <C-k> :sp<CR>
 <C-n> <C-w>h
 <C-e> <C-w>j
 <C-i> <C-w>k
 <C-o> <C-w>l
-<C-w>n <C-w>h
-<C-w>e <C-w>j
-<C-w>i <C-w>k
-<C-w>o <C-w>l
-<C-p> :AerialToggle!<CR>
+# <C-p> :AerialToggle!<CR>
 db :DapToggleBreakpoint<CR>
 dB :lua require 'dap'.set_breakpoint (vim.fn.input '[Condition] > ')<CR>
 dc :DapContinue<CR>

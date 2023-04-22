@@ -5,21 +5,23 @@ end
 if not pcall(require, "Comment") then
 	return false
 end
+
 require("plugins.toggleterm")
-require("plugins.aerial")
 require("plugins.dap")
 require("plugins.formatter")
 require("plugins.nvim-treesitter")
 require("plugins.nvim-cmp")
 require("plugins.nvim-tree")
 require("plugins.lspconfig")
-require("plugins.auto-seesion")
 require("plugins.barbar")
 require("plugins.nvim-cursorline")
 require("plugins.diffview")
+require("plugins.copilot")
+require("plugins.chatgpt")
 require("nvim-treesitter.install").update({})
 require("nvim-ts-autotag").setup({})
 require("nvim-autopairs").setup({})
+require("aerial").setup({})
 require("Comment").setup({})
 -- clipboard
 vim.cmd([[set clipboard+=unnamedplus]])
@@ -28,6 +30,7 @@ vim.cmd([[set clipboard+=unnamedplus]])
 require("onedarkpro").setup({
 	colors = {
 		bg = "#ffffff",
+		line_number = "#ffffff",
 	},
 })
 vim.cmd("colorscheme onelight")
