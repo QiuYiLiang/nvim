@@ -9,6 +9,14 @@ local function on_attach(bufnr)
 	map("I", api.node.navigate.sibling.first)
 	map("E", api.node.navigate.sibling.last)
 	map("R", api.tree.reload)
+	map("r", api.fs.rename)
+	map("d", api.fs.remove)
+	map("a", api.fs.create)
+	map("c", api.fs.copy.node)
+	map("f", api.live_filter.start)
+	map("I", api.tree.toggle_gitignore_filter)
+	map("x", api.fs.cut)
+	map("p", api.fs.paste)
 end
 
 require("nvim-tree").setup({
