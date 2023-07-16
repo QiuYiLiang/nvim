@@ -14,7 +14,7 @@ local function on_attach(bufnr)
 	map("a", api.fs.create)
 	map("c", api.fs.copy.node)
 	map("f", api.live_filter.start)
-	map("I", api.tree.toggle_gitignore_filter)
+	map("y", api.tree.toggle_gitignore_filter)
 	map("x", api.fs.cut)
 	map("p", api.fs.paste)
 end
