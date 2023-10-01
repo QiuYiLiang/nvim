@@ -7,7 +7,6 @@ local servers = {
 	"jsonls",
 	"clangd",
 	"pylsp",
-	"marksman",
 	"bashls",
 	"eslint",
 	"gopls",
