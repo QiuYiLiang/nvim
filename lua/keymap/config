@@ -5,7 +5,7 @@ i k
 o l
 l y
 ll yy
-y i
+r i
 ; o
 [ p
 s d
@@ -38,11 +38,10 @@ ei <Esc>
 # <leader>b :Telescope buffers<CR>
 <leader>a :lua vim.lsp.buf.code_action()<CR>
 <leader>/ :lua require('Comment.api').toggle.linewise.current()<CR>
-<leader>q :lua vim.diagnostic.setloclist()<CR>
 # <leader>m :lua vim.lsp.buf.formatting()<CR>
 <leader>h :DiffviewToggle<CR>
 <leader>r :lua vim.lsp.buf.rename()<CR> 
-<C-c> :GitBlameToggle<CR> 
+<leader>b :GitBlameToggle<CR> 
 <C-b> :ToggleTerm direction=float<CR>a
 # <C-u> :vsp<CR>
 # <C-k> :sp<CR>
@@ -65,6 +64,7 @@ O :BufferNext<CR>
 gs :lua vim.lsp.buf.definition()<CR> 
 
 #v
+a c
 > >gv
 < <gv
 <leader>/ :lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>
