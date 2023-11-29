@@ -34,3 +34,4 @@ rose-pine/neovim
 sindrets/diffview.nvim
 olimorris/onedarkpro.nvim
 MunifTanjim/nui.nvim
+nvim-telescope/telescope-live-grep-args.nvim

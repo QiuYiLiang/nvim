@@ -21,6 +21,7 @@ require("nvim-ts-autotag").setup({})
 require("nvim-autopairs").setup({})
 require("aerial").setup({})
 require("Comment").setup({})
+require("telescope").load_extension("live_grep_args")
 -- clipboard
 vim.cmd([[set clipboard+=unnamedplus]])
 
