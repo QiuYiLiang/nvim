@@ -2,6 +2,7 @@ require("plugins.dap.nvim-dap-ui")
 require("plugins.dap.nvim-dap-virtual-text")
 require("plugins.dap.jsnode")
 require("plugins.dap.ccppr_vsc")
+require("dap-install").setup(require("plugins.dap.config"))
 
 local dbg_installed_list = require("dap-install.api.debuggers").get_installed_debuggers()
 
@@ -26,5 +27,3 @@ for _, debugger in ipairs(dgb_list) do
 		install(debugger)
 	end
 end
-
-require("dap-install").setup(require("plugins.dap.config"))

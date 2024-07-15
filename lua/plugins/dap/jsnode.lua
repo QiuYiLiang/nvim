@@ -7,22 +7,17 @@ dap.adapters.node2 = {
 	args = { config.installation_path .. "jsnode/vscode-node-debug2/out/src/nodeDebug.js" },
 }
 
-dap.configurations.javascript = {
+local config = {
 	{
-		name = "Launch",
-		type = "node2",
-		request = "launch",
-		program = "${file}",
-		cwd = vim.fn.getcwd(),
-		sourceMaps = true,
-		protocol = "inspector",
-		console = "integratedTerminal",
-	},
-	{
-		name = "Attach to process",
 		type = "node2",
 		request = "attach",
-		-- processId = require'dap.utils'.pick_process,
-		prot = 9229,
+		name = "Attach Program (Node2 with ts-node)",
+		cwd = vim.fn.getcwd(),
+		sourceMaps = true,
+		skipFiles = { "<node_internals>/**" },
+		port = 9229,
 	},
 }
+
+dap.configurations.javascript = config
+dap.configurations.typescript = config
